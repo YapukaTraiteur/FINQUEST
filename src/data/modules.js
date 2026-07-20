@@ -13,7 +13,7 @@ export const MODULES = [
     emoji: '📈',
     color: '#2196F3',
     description: 'PEA, ETF, livrets : fais fructifier ton argent.',
-    lessonIds: [],
+    lessonIds: ['invest-bases', 'pea', 'etf'],
   },
   {
     id: 'credit-emprunt',
@@ -21,7 +21,7 @@ export const MODULES = [
     emoji: '🏦',
     color: '#FF9800',
     description: "Comprends les taux, la capacité d'emprunt et le crédit responsable.",
-    lessonIds: [],
+    lessonIds: ['taux-interet', 'capacite-emprunt', 'credit-responsable'],
   },
   {
     id: 'fiscalite',
@@ -29,7 +29,7 @@ export const MODULES = [
     emoji: '🧾',
     color: '#E91E63',
     description: 'IR, TMI, PFU : décrypte tes impôts.',
-    lessonIds: [],
+    lessonIds: ['ir-bareme', 'tmi', 'pfu'],
   },
   {
     id: 'finance-entreprise',
@@ -37,7 +37,7 @@ export const MODULES = [
     emoji: '🏢',
     color: '#9C27B0',
     description: 'Bilan, BFR, statuts juridiques : les bases pour entreprendre.',
-    lessonIds: [],
+    lessonIds: ['bilan', 'bfr', 'statuts-juridiques'],
   },
 ]
 
