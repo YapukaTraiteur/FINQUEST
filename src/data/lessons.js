@@ -100,6 +100,271 @@ export const LESSONS = {
       },
     ],
   },
+  'suivi-quotidien': {
+    id: 'suivi-quotidien',
+    moduleId: 'budget-epargne',
+    title: 'Suivre son budget au quotidien',
+    emoji: '📱',
+    xp: 20,
+    intro:
+      "Suivre son budget au quotidien permet de repérer immédiatement les écarts entre ce qui était prévu " +
+      'et ce qui est réellement dépensé. Noter ses dépenses dans une application, un tableur ou un simple ' +
+      'carnet aide à prendre conscience de ses habitudes de consommation. Classer ses dépenses par catégories ' +
+      '(logement, alimentation, loisirs) permet d’identifier facilement les postes à ajuster. Un suivi ' +
+      'régulier, même de quelques minutes par semaine, vaut mieux qu’un bilan une fois par an.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Quel est l’intérêt principal de suivre son budget au quotidien ?',
+        options: [
+          'Repérer immédiatement les écarts entre prévisions et dépenses réelles',
+          'Éviter totalement de dépenser de l’argent',
+          'Supprimer le besoin de gagner un revenu',
+          'Payer moins d’impôts automatiquement',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un suivi régulier permet de détecter rapidement un écart avec ce qui était prévu, avant qu’il ne s’aggrave.',
+      },
+      {
+        id: 'q2',
+        question: 'Pourquoi classer ses dépenses par catégories ?',
+        options: [
+          'Pour identifier facilement les postes à ajuster',
+          'Cela n’a aucune utilité pratique',
+          'Uniquement pour faire plaisir à sa banque',
+          'Pour augmenter automatiquement ses revenus',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Classer ses dépenses (logement, alimentation, loisirs...) rend visible les postes sur lesquels il est possible d’agir.',
+      },
+      {
+        id: 'q3',
+        question: 'À quelle fréquence est-il conseillé de suivre son budget ?',
+        options: [
+          'Une fois tous les 5 ans',
+          'Jamais, ce n’est pas utile',
+          'Régulièrement, même quelques minutes par semaine',
+          'Uniquement le jour de la retraite',
+        ],
+        correctIndex: 2,
+        explanation:
+          'Un suivi court mais régulier est plus efficace qu’un bilan isolé une fois par an, car il permet d’ajuster ses habitudes en continu.',
+      },
+    ],
+  },
+  'livrets-reglementes': {
+    id: 'livrets-reglementes',
+    moduleId: 'budget-epargne',
+    title: "Les livrets d'épargne réglementés",
+    emoji: '📗',
+    xp: 25,
+    intro:
+      "En France, plusieurs livrets d'épargne réglementés par l'État permettent d'épargner en toute sécurité " +
+      'avec des intérêts exonérés d’impôt. Le Livret A est le plus connu : accessible à tous, plafonné à ' +
+      '22 950 €, avec un taux fixé par les pouvoirs publics. Le LDDS (Livret de Développement Durable et ' +
+      'Solidaire) fonctionne de manière similaire avec un plafond de 12 000 €. Le LEP (Livret d’Épargne ' +
+      'Populaire) offre un taux plus avantageux mais est réservé aux foyers aux revenus modestes.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Quel est le plafond du Livret A ?',
+        options: ['12 000 €', '22 950 €', '150 000 €', "Il n'y a pas de plafond"],
+        correctIndex: 1,
+        explanation: 'Le Livret A est plafonné à 22 950 € pour les particuliers.',
+      },
+      {
+        id: 'q2',
+        question: 'Quel est le principal avantage fiscal des livrets réglementés comme le Livret A ?',
+        options: [
+          'Les intérêts sont exonérés d’impôt',
+          'Ils rapportent un taux garanti de 10%',
+          'Ils permettent de déduire ses impôts sur le revenu',
+          'Ils sont réservés aux entreprises',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les intérêts des livrets réglementés comme le Livret A ou le LDDS ne sont soumis ni à l’impôt sur le revenu ni aux prélèvements sociaux.',
+      },
+      {
+        id: 'q3',
+        question: 'À qui le LEP est-il réservé ?',
+        options: [
+          'À tout le monde sans condition',
+          'Uniquement aux entreprises',
+          'Aux foyers aux revenus modestes',
+          'Aux personnes de plus de 70 ans uniquement',
+        ],
+        correctIndex: 2,
+        explanation:
+          'Le LEP est soumis à une condition de ressources : il est réservé aux foyers dont les revenus ne dépassent pas un certain plafond.',
+      },
+    ],
+  },
+  'objectifs-epargne': {
+    id: 'objectifs-epargne',
+    moduleId: 'budget-epargne',
+    title: "Fixer des objectifs d'épargne",
+    emoji: '🎯',
+    xp: 25,
+    intro:
+      'Épargner sans objectif précis rend l’effort difficile à maintenir dans la durée. Un bon objectif ' +
+      'd’épargne doit être concret, chiffré et daté : par exemple, 2 000 € pour un voyage dans 12 mois plutôt ' +
+      'que « épargner plus ». Diviser un objectif en versements mensuels réguliers rend la démarche plus ' +
+      'simple et plus motivante. Séparer ses objectifs (épargne de précaution, projets, retraite) sur des ' +
+      'supports différents aide aussi à ne pas tout mélanger.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Pourquoi un objectif d’épargne doit-il être chiffré et daté ?',
+        options: [
+          'Cela rend l’objectif plus concret et plus facile à atteindre',
+          'La loi l’exige pour tous les livrets',
+          'Cela n’a aucune influence sur la motivation',
+          'Pour payer plus de frais bancaires',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un objectif chiffré et daté (« 2 000 € en 12 mois ») est bien plus motivant et actionnable qu’une intention vague comme « épargner plus ».',
+      },
+      {
+        id: 'q2',
+        question: 'Que permet de diviser un objectif d’épargne en versements mensuels ?',
+        options: [
+          'Rendre la démarche plus simple et régulière',
+          'Multiplier automatiquement le montant final',
+          'Supprimer le besoin d’épargner',
+          'Augmenter les impôts sur l’épargne',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Découper un objectif en petits versements mensuels réguliers rend l’effort d’épargne plus facile à tenir dans la durée.',
+      },
+      {
+        id: 'q3',
+        question: 'Pourquoi séparer ses objectifs d’épargne sur des supports différents ?',
+        options: [
+          'Pour ne pas tout mélanger et mieux suivre chaque projet',
+          'C’est interdit de les regrouper par la loi',
+          'Cela n’apporte aucun bénéfice',
+          'Pour payer plus d’impôts',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Séparer épargne de précaution, projets et retraite sur des supports différents permet de suivre clairement l’avancement de chaque objectif.',
+      },
+    ],
+  },
+  'depenses-invisibles': {
+    id: 'depenses-invisibles',
+    moduleId: 'budget-epargne',
+    title: 'Repérer les dépenses invisibles',
+    emoji: '🕵️',
+    xp: 25,
+    intro:
+      'Les dépenses invisibles sont de petites sommes régulières qui passent souvent inaperçues mais qui ' +
+      'pèsent lourd sur l’année : abonnements oubliés, frais bancaires, achats impulsifs en ligne. Beaucoup ' +
+      'de personnes payent chaque mois pour des services qu’elles n’utilisent plus, comme un streaming ou ' +
+      'une salle de sport. Relire régulièrement ses relevés bancaires permet d’identifier ces prélèvements ' +
+      'récurrents et de les résilier si besoin. Cette chasse aux petites fuites peut libérer un budget non ' +
+      'négligeable, sans réduire son niveau de vie.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Que sont les "dépenses invisibles" ?',
+        options: [
+          'De petites sommes régulières qui passent souvent inaperçues',
+          'Uniquement les gros achats exceptionnels',
+          'Des dépenses qui n’existent pas réellement',
+          'Les impôts prélevés à la source',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Ce sont des petits montants récurrents (abonnements, frais bancaires...) qui passent souvent inaperçus mais s’accumulent sur l’année.',
+      },
+      {
+        id: 'q2',
+        question: 'Que faut-il faire régulièrement pour repérer ces dépenses ?',
+        options: [
+          'Relire ses relevés bancaires',
+          'Ignorer complètement ses comptes',
+          'Changer de banque chaque mois',
+          'Arrêter de consulter ses comptes',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Relire régulièrement ses relevés bancaires permet de repérer les prélèvements récurrents oubliés et de les résilier si besoin.',
+      },
+      {
+        id: 'q3',
+        question: 'Quel est l’intérêt de traquer les abonnements inutilisés ?',
+        options: [
+          'Libérer du budget sans réduire son niveau de vie',
+          'Payer plus de frais bancaires',
+          'Augmenter ses impôts',
+          'Cela n’a aucun intérêt financier',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Résilier des abonnements qu’on n’utilise plus permet de dégager du budget supplémentaire sans rien sacrifier à son quotidien.',
+      },
+    ],
+  },
+  'se-payer-en-premier': {
+    id: 'se-payer-en-premier',
+    moduleId: 'budget-epargne',
+    title: 'Se payer en premier',
+    emoji: '💵',
+    xp: 20,
+    intro:
+      'Le principe « se payer en premier » consiste à mettre de côté une partie de ses revenus dès leur ' +
+      'réception, avant de couvrir ses autres dépenses. Concrètement, cela passe souvent par un virement ' +
+      'automatique programmé vers un compte épargne le jour du versement du salaire. Cette méthode inverse ' +
+      'la logique classique qui consiste à épargner ce qu’il reste en fin de mois, souvent proche de zéro. ' +
+      'Automatiser l’épargne réduit l’effort de volonté nécessaire et rend l’habitude beaucoup plus durable.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'En quoi consiste le principe "se payer en premier" ?',
+        options: [
+          'Mettre de côté une partie de ses revenus dès leur réception',
+          'Dépenser tout son salaire avant d’épargner',
+          'Attendre la fin du mois pour épargner ce qu’il reste',
+          'Emprunter pour épargner davantage',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le principe inverse la logique habituelle : on épargne d’abord, dès la réception du revenu, avant de dépenser le reste.',
+      },
+      {
+        id: 'q2',
+        question: 'Comment automatiser concrètement cette méthode ?',
+        options: [
+          'Avec un virement automatique programmé le jour du salaire',
+          'En demandant à sa banque de tout bloquer',
+          'En attendant d’y penser chaque mois',
+          'Ce n’est pas automatisable',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Programmer un virement automatique vers un compte épargne dès la réception du salaire est la façon la plus simple d’appliquer ce principe.',
+      },
+      {
+        id: 'q3',
+        question: 'Quel est l’avantage principal d’automatiser son épargne ?',
+        options: [
+          'Réduire l’effort de volonté et rendre l’habitude durable',
+          'Augmenter ses impôts automatiquement',
+          'Supprimer le besoin de suivre son budget',
+          'Cela n’apporte aucun bénéfice réel',
+        ],
+        correctIndex: 0,
+        explanation:
+          'En automatisant l’épargne, on ne dépend plus de sa volonté chaque mois : l’habitude devient durable sans effort supplémentaire.',
+      },
+    ],
+  },
   'invest-bases': {
     id: 'invest-bases',
     moduleId: 'investissement',

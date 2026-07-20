@@ -5,7 +5,15 @@ export const MODULES = [
     emoji: '💰',
     color: '#4CAF50',
     description: "Maîtrise ton budget et construis ton épargne de sécurité.",
-    lessonIds: ['budget-101', 'epargne-precaution'],
+    lessonIds: [
+      'budget-101',
+      'epargne-precaution',
+      'suivi-quotidien',
+      'livrets-reglementes',
+      'objectifs-epargne',
+      'depenses-invisibles',
+      'se-payer-en-premier',
+    ],
   },
   {
     id: 'investissement',
