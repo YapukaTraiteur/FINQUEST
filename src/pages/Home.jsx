@@ -2,13 +2,17 @@ import { useNavigate } from 'react-router-dom'
 import { MODULES } from '../data/modules.js'
 import { useProgress, getLevelForXp } from '../hooks/useProgress.js'
 import { useStreak } from '../hooks/useStreak.js'
+import { useHearts } from '../hooks/useHearts.js'
 import ProgressBar from '../components/ProgressBar.jsx'
 import Badge from '../components/Badge.jsx'
+import Hearts from '../components/Hearts.jsx'
+import EagleMascot from '../components/EagleMascot.jsx'
 
 export default function Home() {
   const navigate = useNavigate()
   const { xp, getModuleCompletion } = useProgress()
   const { streakCount, activeToday } = useStreak()
+  const { hearts, maxHearts } = useHearts()
   const { current, next } = getLevelForXp(xp)
 
   const totalLessons = MODULES.reduce((sum, m) => sum + m.lessonIds.length, 0)
@@ -23,19 +27,25 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-6 px-5 pb-24 pt-6">
-      <header className="flex items-center justify-between">
-        <div>
-          <p className="text-white/50 text-sm">Bienvenue sur</p>
-          <h1 className="text-2xl font-black text-white">
-            Fin<span className="text-primary">Quest</span>
-          </h1>
+      <header className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <EagleMascot mood="happy" size={52} />
+          <div>
+            <p className="text-white/50 text-sm">Bienvenue sur</p>
+            <h1 className="text-2xl font-black text-white">
+              Fin<span className="text-primary">Quest</span>
+            </h1>
+          </div>
         </div>
-        <div
-          className={`flex items-center gap-1 rounded-full px-3 py-1.5 font-extrabold text-sm ${
-            activeToday ? 'bg-gold/20 text-gold animate-pulse-glow' : 'bg-white/10 text-white/50'
-          }`}
-        >
-          🔥 {streakCount}
+        <div className="flex flex-col items-end gap-1.5 shrink-0">
+          <div
+            className={`flex items-center gap-1 rounded-full px-3 py-1.5 font-extrabold text-sm ${
+              activeToday ? 'bg-gold/20 text-gold animate-pulse-glow' : 'bg-white/10 text-white/50'
+            }`}
+          >
+            🔥 {streakCount}
+          </div>
+          <Hearts hearts={hearts} maxHearts={maxHearts} size="sm" />
         </div>
       </header>
 

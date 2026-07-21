@@ -5,6 +5,7 @@ import { getModuleById } from '../data/modules.js'
 import { useProgress } from '../hooks/useProgress.js'
 import { useStreak } from '../hooks/useStreak.js'
 import Confetti from '../components/Confetti.jsx'
+import EagleMascot from '../components/EagleMascot.jsx'
 
 export default function Results() {
   const { lessonId } = useParams()
@@ -43,7 +44,9 @@ export default function Results() {
     <div className="relative flex flex-col items-center gap-6 px-5 pb-24 pt-16 min-h-screen text-center overflow-hidden">
       {allCorrect && <Confetti />}
 
-      <div className="text-7xl animate-pop-in">{allCorrect ? '🏆' : '🎉'}</div>
+      <div className="animate-pop-in">
+        <EagleMascot mood={allCorrect ? 'excited' : 'happy'} size={130} />
+      </div>
 
       <div className="animate-pop-in">
         <h1 className="text-2xl font-black text-white mb-1">

@@ -47,6 +47,14 @@ export const MODULES = [
     description: 'Bilan, BFR, statuts juridiques : les bases pour entreprendre.',
     lessonIds: ['bilan', 'bfr', 'statuts-juridiques'],
   },
+  {
+    id: 'economie-francaise',
+    title: 'Économie française',
+    emoji: '🇫🇷',
+    color: '#00ACC1',
+    description: 'Secteurs, monnaie, CAC 40 : comprends l’économie de ton pays.',
+    lessonIds: ['secteurs-activite', 'monnaie-inflation', 'cac40'],
+  },
 ]
 
 export function getModuleById(moduleId) {

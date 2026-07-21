@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import EagleMascot from './EagleMascot.jsx'
 
 export default function QuizQuestion({ question, onAnswered }) {
   const [selectedIndex, setSelectedIndex] = useState(null)
@@ -47,14 +48,17 @@ export default function QuizQuestion({ question, onAnswered }) {
 
       {answered && (
         <div
-          className={`rounded-xl p-4 animate-pop-in border-2 ${
+          className={`flex items-start gap-3 rounded-xl p-4 animate-pop-in border-2 ${
             isCorrect ? 'border-primary bg-primary/10' : 'border-gold bg-gold/10'
           }`}
         >
-          <p className={`font-extrabold mb-1 ${isCorrect ? 'text-primary' : 'text-gold'}`}>
-            {isCorrect ? '✅ Bonne réponse !' : '❌ Pas tout à fait...'}
-          </p>
-          <p className="text-sm text-white/80">{question.explanation}</p>
+          <EagleMascot mood={isCorrect ? 'happy' : 'sad'} size={56} className="shrink-0" />
+          <div>
+            <p className={`font-extrabold mb-1 ${isCorrect ? 'text-primary' : 'text-gold'}`}>
+              {isCorrect ? '✅ Bonne réponse !' : '❌ Pas tout à fait...'}
+            </p>
+            <p className="text-sm text-white/80">{question.explanation}</p>
+          </div>
         </div>
       )}
     </div>

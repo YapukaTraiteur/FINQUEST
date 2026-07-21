@@ -7,7 +7,7 @@ Application web éducative façon Duolingo, dédiée à la finance personnelle p
 - React + Vite
 - TailwindCSS
 - React Router (HashRouter)
-- Persistance locale via `localStorage` (progression XP, streak quotidien)
+- Persistance locale via `localStorage` (progression XP, streak quotidien, cœurs)
 
 ## Démarrer
 
@@ -25,20 +25,21 @@ npm run preview
 
 ## Modules
 
-- 💰 Budget & épargne (2 leçons de démo incluses)
-- 📈 Investissement (PEA, ETF, livrets) — à venir
-- 🏦 Crédit & emprunt — à venir
-- 🧾 Fiscalité française (IR, TMI, PFU) — à venir
-- 🏢 Finance d'entreprise (bilan, BFR, statuts) — à venir
+- 💰 Budget & épargne (7 leçons)
+- 📈 Investissement (PEA, ETF, livrets) (3 leçons)
+- 🏦 Crédit & emprunt (3 leçons)
+- 🧾 Fiscalité française (IR, TMI, PFU) (3 leçons)
+- 🏢 Finance d'entreprise (bilan, BFR, statuts) (3 leçons)
+- 🇫🇷 Économie française (secteurs, monnaie, CAC 40) (3 leçons)
 
 ## Structure
 
 ```
 src/
-  components/   LessonCard, QuizQuestion, ProgressBar, Badge, Confetti
+  components/   LessonCard, QuizQuestion, ProgressBar, Badge, Confetti, Hearts, EagleMascot
   pages/        Home, ModuleDetail, Lesson, Results
   data/         lessons.js, modules.js
-  hooks/        useProgress.js, useStreak.js
+  hooks/        useProgress.js, useStreak.js, useHearts.js
   App.jsx
   main.jsx
 ```
@@ -49,3 +50,7 @@ src/
 - Streak quotidien sauvegardé en `localStorage`
 - Barre de progression par module
 - Badges de niveau : Novice → Épargnant → Investisseur → Expert
+- Mascotte aigle (façon Duo) qui réagit aux bonnes/mauvaises réponses
+- Points de vie (cœurs) : 5 cœurs max, -1 par mauvaise réponse, régénération
+  automatique (1 cœur toutes les 4h). Plus de cœurs = leçon bloquée jusqu'à
+  régénération.

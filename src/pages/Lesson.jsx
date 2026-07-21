@@ -2,10 +2,21 @@ import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getLessonById } from '../data/lessons.js'
 import { getModuleById } from '../data/modules.js'
+import { useHearts } from '../hooks/useHearts.js'
 import QuizQuestion from '../components/QuizQuestion.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
+import Hearts from '../components/Hearts.jsx'
+import EagleMascot from '../components/EagleMascot.jsx'
 
 const STEP_INTRO = 'intro'
+
+function formatCountdown(ms) {
+  if (ms <= 0) return 'quelques instants'
+  const totalMinutes = Math.ceil(ms / 60000)
+  const hours = Math.floor(totalMinutes / 60)
+  const minutes = totalMinutes % 60
+  return hours > 0 ? `${hours} h ${minutes} min` : `${minutes} min`
+}
 
 export default function Lesson() {
   const { lessonId } = useParams()
@@ -14,6 +25,7 @@ export default function Lesson() {
   const [step, setStep] = useState(STEP_INTRO)
   const [correctCount, setCorrectCount] = useState(0)
   const [hasAnswered, setHasAnswered] = useState(false)
+  const { hearts, maxHearts, nextRegenAt, loseHeart } = useHearts()
 
   if (!lesson) {
     return (
@@ -31,9 +43,14 @@ export default function Lesson() {
   const isIntro = step === STEP_INTRO
   const questionIndex = isIntro ? 0 : step
   const currentQuestion = isIntro ? null : lesson.questions[questionIndex]
+  const outOfHearts = hearts <= 0
 
   function handleAnswered(isCorrect) {
-    if (isCorrect) setCorrectCount((c) => c + 1)
+    if (isCorrect) {
+      setCorrectCount((c) => c + 1)
+    } else {
+      loseHeart()
+    }
     setHasAnswered(true)
   }
 
@@ -51,6 +68,7 @@ export default function Lesson() {
   }
 
   const progressPercent = isIntro ? 0 : ((step + 1) / totalQuestions) * 100
+  const showFooter = isIntro || hasAnswered
 
   return (
     <div className="flex flex-col gap-6 px-5 pb-24 pt-6 min-h-screen">
@@ -58,7 +76,7 @@ export default function Lesson() {
         <button
           type="button"
           onClick={() => navigate(-1)}
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-bg-card border border-white/10 text-white/70"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-bg-card border border-white/10 text-white/70 shrink-0"
           aria-label="Quitter la leçon"
         >
           ✕
@@ -66,14 +84,17 @@ export default function Lesson() {
         <div className="flex-1">
           <ProgressBar percent={progressPercent} color={module?.color ?? '#4CAF50'} />
         </div>
+        <Hearts hearts={hearts} maxHearts={maxHearts} size="sm" />
       </header>
 
       <div className="flex-1 flex flex-col gap-6">
         {isIntro ? (
-          <div className="flex flex-col gap-4 animate-pop-in">
-            <div className="text-5xl text-center">{lesson.emoji}</div>
-            <h1 className="text-2xl font-black text-white text-center">{lesson.title}</h1>
-            <div className="rounded-2xl bg-bg-card border border-white/10 p-5">
+          <div className="flex flex-col gap-4 animate-pop-in items-center">
+            <EagleMascot mood="happy" size={110} />
+            <h1 className="text-2xl font-black text-white text-center flex items-center gap-2">
+              <span>{lesson.emoji}</span> {lesson.title}
+            </h1>
+            <div className="rounded-2xl bg-bg-card border border-white/10 p-5 w-full">
               <p className="text-white/80 leading-relaxed">{lesson.intro}</p>
             </div>
           </div>
@@ -87,15 +108,31 @@ export default function Lesson() {
         )}
       </div>
 
-      {(isIntro || hasAnswered) && (
-        <button
-          type="button"
-          onClick={goNext}
-          className="w-full rounded-2xl bg-primary py-4 font-extrabold text-white active:scale-[0.98] transition-transform animate-pop-in"
-        >
-          {isIntro ? 'Commencer 🚀' : step + 1 < totalQuestions ? 'Continuer →' : 'Voir mes résultats 🏆'}
-        </button>
-      )}
+      {showFooter &&
+        (outOfHearts ? (
+          <div className="flex flex-col items-center gap-3 rounded-2xl bg-bg-card border border-white/10 p-5 animate-pop-in text-center">
+            <EagleMascot mood="sad" size={80} />
+            <p className="font-extrabold text-white">Tu n'as plus de cœurs !</p>
+            <p className="text-sm text-white/60">
+              Prochain cœur dans {formatCountdown((nextRegenAt ?? Date.now()) - Date.now())}
+            </p>
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="w-full rounded-2xl bg-primary py-4 font-extrabold text-white active:scale-[0.98] transition-transform"
+            >
+              Retour à l'accueil
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={goNext}
+            className="w-full rounded-2xl bg-primary py-4 font-extrabold text-white active:scale-[0.98] transition-transform animate-pop-in"
+          >
+            {isIntro ? 'Commencer 🚀' : step + 1 < totalQuestions ? 'Continuer →' : 'Voir mes résultats 🏆'}
+          </button>
+        ))}
     </div>
   )
 }

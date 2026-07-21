@@ -999,6 +999,162 @@ export const LESSONS = {
       },
     ],
   },
+  'secteurs-activite': {
+    id: 'secteurs-activite',
+    moduleId: 'economie-francaise',
+    title: "Les secteurs de l'économie",
+    emoji: '🏭',
+    xp: 20,
+    intro:
+      "L'économie française se divise traditionnellement en trois grands secteurs d'activité. Le secteur " +
+      'primaire regroupe l’agriculture, la pêche et l’extraction de matières premières. Le secteur secondaire ' +
+      'correspond à l’industrie et à la transformation de ces matières premières en produits finis. Le secteur ' +
+      'tertiaire, aujourd’hui largement dominant en France, rassemble tous les services : commerce, santé, ' +
+      'éducation, finance ou tourisme.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Que regroupe le secteur primaire ?',
+        options: [
+          "L'agriculture, la pêche et l'extraction de matières premières",
+          'Les banques et les assurances',
+          "L'industrie automobile uniquement",
+          'Le commerce en ligne',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le secteur primaire concerne l’exploitation des ressources naturelles : agriculture, pêche, extraction de matières premières.',
+      },
+      {
+        id: 'q2',
+        question: 'Quel secteur correspond à la transformation des matières premières en produits finis ?',
+        options: ['Le secteur primaire', 'Le secteur secondaire', 'Le secteur tertiaire', 'Aucun des trois'],
+        correctIndex: 1,
+        explanation:
+          'Le secteur secondaire regroupe les activités industrielles qui transforment les matières premières en produits finis.',
+      },
+      {
+        id: 'q3',
+        question: 'Quel secteur est aujourd’hui largement dominant dans l’économie française ?',
+        options: [
+          'Le secteur primaire',
+          'Le secteur secondaire',
+          'Le secteur tertiaire (les services)',
+          "Aucun secteur n'est dominant",
+        ],
+        correctIndex: 2,
+        explanation:
+          'Le secteur tertiaire (commerce, santé, éducation, finance, tourisme...) représente aujourd’hui la majorité de l’activité économique française.',
+      },
+    ],
+  },
+  'monnaie-inflation': {
+    id: 'monnaie-inflation',
+    moduleId: 'economie-francaise',
+    title: "La monnaie et l'inflation",
+    emoji: '💶',
+    xp: 25,
+    intro:
+      "L'euro est la monnaie utilisée par la France depuis 2002, gérée au niveau européen par la Banque " +
+      'Centrale Européenne (BCE). La BCE a pour mission principale de maintenir la stabilité des prix, avec un ' +
+      'objectif d’inflation proche de 2% par an. L’inflation correspond à la hausse générale et durable des ' +
+      'prix, qui réduit le pouvoir d’achat si les revenus n’augmentent pas au même rythme. À l’inverse, une ' +
+      'inflation trop faible ou négative (déflation) peut aussi freiner l’activité économique.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Quelle institution gère la monnaie unique européenne ?',
+        options: [
+          'La Banque de France uniquement',
+          'La Banque Centrale Européenne (BCE)',
+          'Le gouvernement français',
+          'Aucune institution ne la gère',
+        ],
+        correctIndex: 1,
+        explanation:
+          'La BCE fixe la politique monétaire de la zone euro et a pour objectif principal la stabilité des prix.',
+      },
+      {
+        id: 'q2',
+        question: "Que signifie l'inflation ?",
+        options: [
+          'Une baisse générale et durable des prix',
+          'La hausse générale et durable des prix',
+          'La stabilité totale des prix',
+          'Le taux de change entre deux monnaies',
+        ],
+        correctIndex: 1,
+        explanation: 'L’inflation désigne une hausse générale et durable du niveau des prix dans l’économie.',
+      },
+      {
+        id: 'q3',
+        question: "Quel est l'effet d'une forte inflation si les revenus n'augmentent pas autant ?",
+        options: [
+          'Le pouvoir d’achat diminue',
+          'Le pouvoir d’achat augmente automatiquement',
+          'Cela n’a aucun effet sur le pouvoir d’achat',
+          'Les prix baissent immédiatement',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Si les prix augmentent plus vite que les revenus, on peut acheter moins avec la même somme : le pouvoir d’achat diminue.',
+      },
+    ],
+  },
+  cac40: {
+    id: 'cac40',
+    moduleId: 'economie-francaise',
+    title: 'Le CAC 40',
+    emoji: '📈',
+    xp: 25,
+    intro:
+      "Le CAC 40 est l'indice boursier de référence de la Bourse de Paris. Il regroupe les 40 plus grandes " +
+      'entreprises françaises cotées, sélectionnées notamment selon leur capitalisation boursière et leur ' +
+      'volume d’échanges. Sa valeur évolue en temps réel selon les cours de bourse de ces entreprises, et sert ' +
+      'd’indicateur de la santé économique perçue des grandes entreprises françaises. Investir directement sur ' +
+      'l’indice, par exemple via un ETF, permet de miser sur l’ensemble de ces 40 entreprises en une seule fois.',
+    questions: [
+      {
+        id: 'q1',
+        question: 'Que représente le CAC 40 ?',
+        options: [
+          'L’indice boursier des 40 plus grandes entreprises françaises cotées',
+          'Le taux d’intérêt de la Banque de France',
+          'Le nombre de banques en France',
+          'Un impôt sur les entreprises',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le CAC 40 est l’indice phare de la Bourse de Paris, composé des 40 plus grandes capitalisations françaises cotées.',
+      },
+      {
+        id: 'q2',
+        question: 'Sur quel critère les entreprises sont-elles notamment sélectionnées dans le CAC 40 ?',
+        options: [
+          'Leur capitalisation boursière et leur volume d’échanges',
+          'Leur ancienneté uniquement',
+          'Le nombre d’employés en CDI',
+          'Leur localisation géographique en France',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La sélection des entreprises du CAC 40 repose notamment sur leur capitalisation boursière et la liquidité de leur titre (volume d’échanges).',
+      },
+      {
+        id: 'q3',
+        question: 'Comment peut-on investir sur l’ensemble du CAC 40 en une seule fois ?',
+        options: [
+          'En achetant une seule action au hasard',
+          'Via un ETF répliquant l’indice',
+          "Ce n'est pas possible",
+          'En ouvrant un livret A',
+        ],
+        correctIndex: 1,
+        explanation:
+          'Un ETF qui réplique le CAC 40 permet d’investir en une seule opération dans les 40 entreprises qui composent l’indice.',
+      },
+    ],
+  },
 }
 
 export function getLessonById(lessonId) {
