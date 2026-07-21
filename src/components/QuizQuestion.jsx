@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import EagleMascot from './EagleMascot.jsx'
+import { useSoundEffects } from '../hooks/useSoundEffects.js'
 
 export default function QuizQuestion({ question, onAnswered }) {
   const [selectedIndex, setSelectedIndex] = useState(null)
   const [answered, setAnswered] = useState(false)
+  const { playCorrect, playIncorrect } = useSoundEffects()
 
   const isCorrect = selectedIndex === question.correctIndex
 
@@ -11,7 +13,13 @@ export default function QuizQuestion({ question, onAnswered }) {
     if (answered) return
     setSelectedIndex(index)
     setAnswered(true)
-    onAnswered?.(index === question.correctIndex)
+    const correct = index === question.correctIndex
+    if (correct) {
+      playCorrect()
+    } else {
+      playIncorrect()
+    }
+    onAnswered?.(correct)
   }
 
   function optionClasses(index) {
