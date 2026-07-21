@@ -50,6 +50,45 @@ export const LESSONS = {
         explanation:
           "Les 50% couvrent les besoins essentiels : logement, alimentation, transport, factures — tout ce qui est indispensable.",
       },
+      {
+        id: 'q4',
+        question: "Quel est le but principal d'un budget mensuel ?",
+        options: [
+          'Comparer ce que l’on gagne et ce que l’on dépense',
+          'Payer plus d’impôts',
+          'Emprunter davantage',
+          'Éviter de travailler',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un budget sert avant tout à comparer revenus et dépenses pour garder le contrôle de ses finances.',
+      },
+      {
+        id: 'q5',
+        question: 'Que représentent les 30% dans la règle 50/30/20 ?',
+        options: [
+          'Les envies et loisirs',
+          'Les besoins essentiels',
+          'L’épargne',
+          'Les impôts',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les 30% sont dédiés aux dépenses de plaisir et de loisir, une fois les besoins essentiels couverts.',
+      },
+      {
+        id: 'q6',
+        question: 'Pourquoi dit-on que le budget est un outil de liberté plutôt qu’une contrainte ?',
+        options: [
+          'Parce qu’il permet de faire des choix éclairés sur son argent',
+          'Parce qu’il supprime toutes les dépenses',
+          'Parce qu’il est imposé par la loi',
+          'Parce qu’il garantit de devenir riche',
+        ],
+        correctIndex: 0,
+        explanation:
+          'En donnant de la visibilité sur ses finances, le budget permet de faire des choix éclairés plutôt que de subir ses dépenses.',
+      },
     ],
   },
   'epargne-precaution': {
@@ -97,6 +136,45 @@ export const LESSONS = {
         correctIndex: 2,
         explanation:
           "La disponibilité immédiate et la sécurité du capital priment ici sur la performance : le livret A est l'exemple type.",
+      },
+      {
+        id: 'q4',
+        question: "Que peut financer l'épargne de précaution ?",
+        options: [
+          'Une panne de voiture ou des frais médicaux imprévus',
+          'Un investissement en actions risqué',
+          'Le paiement d’impôts supplémentaires',
+          "L'achat d'une résidence secondaire",
+        ],
+        correctIndex: 0,
+        explanation:
+          'Elle est destinée à couvrir les imprévus du quotidien, pas des projets ou investissements planifiés.',
+      },
+      {
+        id: 'q5',
+        question: "Que risque-t-on si l'on n'a pas d'épargne de précaution ?",
+        options: [
+          "Devoir s'endetter en urgence face à un imprévu",
+          'Payer moins d’impôts',
+          'Recevoir plus d’aides de l’État',
+          'Rien de particulier',
+        ],
+        correctIndex: 0,
+        explanation:
+          "Sans épargne de précaution, un imprévu financier oblige souvent à emprunter dans l'urgence, parfois à des conditions défavorables.",
+      },
+      {
+        id: 'q6',
+        question: "Avant d'investir en bourse, que doit-on généralement avoir constitué ?",
+        options: [
+          'Une épargne de précaution suffisante',
+          'Un crédit immobilier',
+          'Un compte professionnel',
+          'Une carte de crédit illimitée',
+        ],
+        correctIndex: 0,
+        explanation:
+          "L'épargne de précaution est la première brique à construire avant de prendre des risques sur les marchés financiers.",
       },
     ],
   },
@@ -152,6 +230,44 @@ export const LESSONS = {
         explanation:
           'Un suivi court mais régulier est plus efficace qu’un bilan isolé une fois par an, car il permet d’ajuster ses habitudes en continu.',
       },
+      {
+        id: 'q4',
+        question: 'Quel outil peut-on utiliser pour suivre ses dépenses ?',
+        options: [
+          'Une application, un tableur ou un simple carnet',
+          'Uniquement un conseiller bancaire',
+          "Un logiciel de comptabilité d'entreprise",
+          "Aucun outil n'est utile",
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le suivi peut se faire avec des outils simples et accessibles à tous, adaptés à ses préférences.',
+      },
+      {
+        id: 'q5',
+        question: 'Que permet de visualiser un suivi budgétaire régulier ?',
+        options: [
+          'Ses habitudes de consommation réelles',
+          'Le taux d’intérêt de sa banque',
+          'Le montant de ses impôts futurs',
+          'Le cours de la bourse',
+        ],
+        correctIndex: 0,
+        explanation: 'Le suivi régulier révèle des habitudes de consommation parfois invisibles au quotidien.',
+      },
+      {
+        id: 'q6',
+        question: "Que se passe-t-il si l'on ne suit jamais son budget ?",
+        options: [
+          'On risque de perdre le contrôle de ses dépenses sans s’en rendre compte',
+          'On économise automatiquement plus d’argent',
+          'Cela n’a aucune conséquence',
+          'Ses revenus augmentent automatiquement',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Sans suivi, les écarts entre prévisions et dépenses réelles passent inaperçus jusqu’à ce qu’ils deviennent problématiques.',
+      },
     ],
   },
   'livrets-reglementes': {
@@ -199,6 +315,39 @@ export const LESSONS = {
         correctIndex: 2,
         explanation:
           'Le LEP est soumis à une condition de ressources : il est réservé aux foyers dont les revenus ne dépassent pas un certain plafond.',
+      },
+      {
+        id: 'q4',
+        question: 'Quel est le plafond du LDDS ?',
+        options: ['12 000 €', '22 950 €', '150 000 €', 'Aucun plafond'],
+        correctIndex: 0,
+        explanation: 'Le LDDS est plafonné à 12 000 € de versements.',
+      },
+      {
+        id: 'q5',
+        question: 'Les livrets réglementés comme le Livret A garantissent-ils la disponibilité de l’argent ?',
+        options: [
+          'Oui, les fonds sont disponibles à tout moment',
+          'Non, l’argent est bloqué 5 ans',
+          'Non, il faut un préavis de 6 mois',
+          'Cela dépend de la banque',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les livrets réglementés offrent une disponibilité immédiate des fonds, contrairement à d’autres placements bloqués.',
+      },
+      {
+        id: 'q6',
+        question: 'Pourquoi le taux du Livret A est-il fixé par les pouvoirs publics ?',
+        options: [
+          'Pour garantir un cadre homogène et protecteur pour tous les épargnants',
+          'Pour que chaque banque fixe un taux différent',
+          'Parce que c’est un placement à risque',
+          'Pour limiter les dépôts des ménages',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le taux réglementé assure les mêmes conditions à tous les épargnants, quelle que soit leur banque.',
       },
     ],
   },
@@ -253,6 +402,45 @@ export const LESSONS = {
         correctIndex: 0,
         explanation:
           'Séparer épargne de précaution, projets et retraite sur des supports différents permet de suivre clairement l’avancement de chaque objectif.',
+      },
+      {
+        id: 'q4',
+        question: 'Que risque un objectif d’épargne vague comme "épargner plus" ?',
+        options: [
+          'D’être difficile à tenir dans la durée faute de repère concret',
+          'De rapporter automatiquement plus d’intérêts',
+          'D’être interdit par la loi',
+          'De réduire ses impôts',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Sans montant ni échéance précis, il est difficile de mesurer sa progression et de rester motivé.',
+      },
+      {
+        id: 'q5',
+        question: 'Quel est l’intérêt de revoir régulièrement ses objectifs d’épargne ?',
+        options: [
+          'S’assurer qu’ils restent adaptés à sa situation',
+          'Payer plus de frais bancaires',
+          'Perdre le bénéfice de son épargne',
+          'Aucun intérêt particulier',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La situation personnelle évolue, il est donc utile d’ajuster régulièrement ses objectifs d’épargne.',
+      },
+      {
+        id: 'q6',
+        question: 'Pourquoi automatiser les versements vers un objectif d’épargne est-il utile ?',
+        options: [
+          'Cela évite de devoir y penser chaque mois et rend l’épargne régulière',
+          'Cela supprime totalement le besoin d’épargner',
+          'Cela augmente les impôts',
+          'Cela bloque définitivement l’argent',
+        ],
+        correctIndex: 0,
+        explanation:
+          'L’automatisation rend l’effort d’épargne plus simple à maintenir dans la durée, sans dépendre de la volonté.',
       },
     ],
   },
@@ -309,6 +497,45 @@ export const LESSONS = {
         explanation:
           'Résilier des abonnements qu’on n’utilise plus permet de dégager du budget supplémentaire sans rien sacrifier à son quotidien.',
       },
+      {
+        id: 'q4',
+        question: 'Quel exemple illustre une dépense invisible typique ?',
+        options: [
+          'Un abonnement de streaming oublié',
+          'L’achat d’une voiture neuve',
+          'Le paiement du loyer',
+          'Un investissement en bourse',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les abonnements oubliés sont l’exemple classique de dépense invisible qui s’accumule sans qu’on y prête attention.',
+      },
+      {
+        id: 'q5',
+        question: 'Pourquoi ces petites dépenses sont-elles qualifiées d’"invisibles" ?',
+        options: [
+          'Parce qu’elles sont individuellement faibles mais passent inaperçues',
+          'Parce qu’elles n’apparaissent jamais sur les relevés bancaires',
+          'Parce qu’elles sont illégales',
+          'Parce qu’elles concernent uniquement les entreprises',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Prises isolément, ces dépenses semblent négligeables, mais leur récurrence les rend invisibles tout en pesant sur le budget annuel.',
+      },
+      {
+        id: 'q6',
+        question: 'Que peut-on faire après avoir identifié un abonnement inutile ?',
+        options: [
+          'Le résilier pour libérer du budget',
+          'L’ignorer, cela n’a pas d’importance',
+          'Payer plus cher pour le garder',
+          'Contracter un nouveau crédit',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Résilier les abonnements inutilisés est la façon la plus directe de reprendre le contrôle de ces dépenses invisibles.',
+      },
     ],
   },
   'se-payer-en-premier': {
@@ -362,6 +589,45 @@ export const LESSONS = {
         correctIndex: 0,
         explanation:
           'En automatisant l’épargne, on ne dépend plus de sa volonté chaque mois : l’habitude devient durable sans effort supplémentaire.',
+      },
+      {
+        id: 'q4',
+        question: 'Quelle est la logique classique que ce principe cherche à inverser ?',
+        options: [
+          'Épargner seulement ce qu’il reste en fin de mois',
+          'Épargner avant de recevoir son salaire',
+          'Ne jamais épargner',
+          'Épargner uniquement une fois par an',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La méthode classique consiste à épargner ce qu’il reste après les dépenses, souvent un montant faible ou nul.',
+      },
+      {
+        id: 'q5',
+        question: 'Quel type de compte est généralement utilisé pour recevoir ce virement automatique ?',
+        options: [
+          'Un compte épargne séparé du compte courant',
+          'Un compte professionnel uniquement',
+          'Un compte à l’étranger obligatoirement',
+          'Aucun compte n’est nécessaire',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un compte épargne dédié évite de mélanger l’argent mis de côté avec celui destiné aux dépenses courantes.',
+      },
+      {
+        id: 'q6',
+        question: 'Ce principe est-il compatible avec un petit budget ?',
+        options: [
+          'Oui, même de petits montants réguliers permettent de construire une épargne',
+          'Non, il faut un revenu élevé pour l’appliquer',
+          'Non, il est réservé aux entreprises',
+          'Oui, mais uniquement une fois par an',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Même de faibles montants épargnés régulièrement finissent par constituer une épargne significative dans la durée.',
       },
     ],
   },
@@ -417,6 +683,45 @@ export const LESSONS = {
         explanation:
           "Définir ses objectifs et son horizon de placement permet de choisir des supports d'investissement adaptés à sa situation.",
       },
+      {
+        id: 'q4',
+        question: 'Que signifie diversifier ses investissements ?',
+        options: [
+          'Répartir son argent sur plusieurs actifs pour réduire le risque',
+          'Investir tout son argent dans une seule action',
+          'Ne jamais investir',
+          'Emprunter pour investir davantage',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La diversification permet de ne pas dépendre de la performance d’un seul actif, ce qui réduit le risque global.',
+      },
+      {
+        id: 'q5',
+        question: 'Pourquoi ne faut-il pas investir de l’argent dont on pourrait avoir besoin à court terme ?',
+        options: [
+          'Car les marchés peuvent baisser temporairement et forcer une vente à perte',
+          'Car cela est interdit par la loi',
+          'Car cela augmente automatiquement les impôts',
+          'Cela n’a aucune importance',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Investir de l’argent nécessaire à court terme expose au risque de devoir vendre au mauvais moment, en cas de baisse des marchés.',
+      },
+      {
+        id: 'q6',
+        question: 'Quel est le rôle de l’épargne de précaution avant de commencer à investir ?',
+        options: [
+          'Couvrir les imprévus sans avoir à retirer ses investissements',
+          'Remplacer totalement les investissements',
+          'Payer les frais de courtage',
+          'Aucun rôle particulier',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Une épargne de précaution évite de devoir revendre ses investissements en catastrophe en cas de coup dur.',
+      },
     ],
   },
   pea: {
@@ -464,6 +769,45 @@ export const LESSONS = {
         options: ['10 000 €', '150 000 €', '1 000 000 €', "Il n'y a pas de plafond"],
         correctIndex: 1,
         explanation: 'Le plafond de versement du PEA classique est fixé à 150 000 €.',
+      },
+      {
+        id: 'q4',
+        question: 'Peut-on retirer de l’argent d’un PEA avant 5 ans sans le clôturer ?',
+        options: [
+          'Non, tout retrait avant 5 ans entraîne généralement la clôture du plan',
+          'Oui, sans aucune conséquence',
+          'Oui, mais seulement après 1 an',
+          'Cela dépend uniquement de la banque',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un retrait avant 5 ans entraîne en principe la clôture du PEA et la perte de l’avantage fiscal attaché à l’ancienneté.',
+      },
+      {
+        id: 'q5',
+        question: 'Le PEA permet-il d’investir dans des entreprises non-européennes ?',
+        options: [
+          'Non, il est réservé aux actions et fonds européens',
+          'Oui, sans aucune restriction géographique',
+          'Oui, mais uniquement les entreprises américaines',
+          'Cela dépend du courtier',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le PEA est structurellement limité aux actions d’entreprises ayant leur siège dans l’Union européenne (ou l’Espace économique européen).',
+      },
+      {
+        id: 'q6',
+        question: 'Qui peut ouvrir un PEA ?',
+        options: [
+          'Toute personne majeure fiscalement domiciliée en France',
+          'Uniquement les entreprises',
+          'Uniquement les personnes de plus de 50 ans',
+          'Uniquement les non-résidents',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le PEA est accessible à toute personne physique majeure domiciliée fiscalement en France (un seul PEA par personne).',
       },
     ],
   },
@@ -517,6 +861,45 @@ export const LESSONS = {
         correctIndex: 2,
         explanation:
           "Un ETF répliquant un indice large peut donner une exposition à des dizaines, voire des milliers d'entreprises en une seule fois.",
+      },
+      {
+        id: 'q4',
+        question: 'Un ETF est-il géré activement par un gérant qui choisit les actions ?',
+        options: [
+          'Non, il réplique passivement un indice existant',
+          'Oui, un gérant choisit chaque action quotidiennement',
+          'Cela dépend du jour de la semaine',
+          'Un ETF ne contient aucune action',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La gestion passive d’un ETF consiste à suivre un indice existant, sans sélection active des titres par un gérant.',
+      },
+      {
+        id: 'q5',
+        question: 'Où les ETF peuvent-ils être logés, en plus d’un compte-titres classique ?',
+        options: [
+          'Dans un PEA, s’ils répliquent des indices européens',
+          'Uniquement dans un compte professionnel',
+          'Nulle part ailleurs',
+          'Uniquement à l’étranger',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Certains ETF éligibles au PEA permettent de bénéficier à la fois de la diversification et de la fiscalité avantageuse du PEA.',
+      },
+      {
+        id: 'q6',
+        question: 'Pourquoi les frais de gestion des ETF sont-ils généralement plus bas que ceux des fonds actifs ?',
+        options: [
+          'Parce qu’ils ne nécessitent pas de sélection active des titres par un gérant',
+          'Parce qu’ils sont subventionnés par l’État',
+          'Parce qu’ils ne contiennent qu’une seule action',
+          'Parce qu’ils sont interdits aux particuliers',
+        ],
+        correctIndex: 0,
+        explanation:
+          'L’absence de gestion active réduit fortement les coûts de fonctionnement, ce qui se répercute sur des frais plus faibles.',
       },
     ],
   },
@@ -572,6 +955,45 @@ export const LESSONS = {
         explanation:
           "Comme le TAEG inclut tous les coûts, c'est l'indicateur le plus fiable pour comparer objectivement plusieurs offres.",
       },
+      {
+        id: 'q4',
+        question: 'Le TAEG peut-il être inférieur au taux nominal du prêt ?',
+        options: [
+          'Non, il est toujours égal ou supérieur au taux nominal',
+          'Oui, systématiquement',
+          'Cela dépend uniquement de la durée du prêt',
+          'Le TAEG n’a aucun lien avec le taux nominal',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Comme le TAEG inclut des frais supplémentaires au taux nominal, il est toujours égal ou supérieur à celui-ci.',
+      },
+      {
+        id: 'q5',
+        question: 'Quel risque comporte un taux variable pour l’emprunteur ?',
+        options: [
+          'Voir ses mensualités augmenter si les taux de marché montent',
+          'Payer systématiquement moins cher qu’un taux fixe',
+          'Aucun risque particulier',
+          'Perdre automatiquement son bien',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un taux variable évolue avec les marchés, ce qui peut faire augmenter le coût du crédit en cours de remboursement.',
+      },
+      {
+        id: 'q6',
+        question: 'Que doit-on vérifier en plus du taux avant de signer un crédit ?',
+        options: [
+          'Les frais de dossier et le coût de l’assurance emprunteur',
+          'Uniquement la couleur du contrat',
+          'Le nombre d’agences de la banque',
+          'Rien d’autre n’est nécessaire',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Frais de dossier et assurance emprunteur font partie du coût réel du crédit, déjà inclus dans le TAEG.',
+      },
     ],
   },
   'capacite-emprunt': {
@@ -625,6 +1047,46 @@ export const LESSONS = {
         correctIndex: 0,
         explanation:
           'Une capacité d’emprunt bien estimée protège contre un endettement excessif par rapport à ses revenus réels.',
+      },
+      {
+        id: 'q4',
+        question: 'Quels éléments une banque prend-elle en compte pour calculer la capacité d’emprunt ?',
+        options: [
+          'Les revenus et les charges de l’emprunteur',
+          'Uniquement l’âge de l’emprunteur',
+          'Uniquement le montant du bien à acheter',
+          'La couleur de la carte bancaire',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La capacité d’emprunt dépend directement du rapport entre revenus, charges existantes et nouvelle mensualité.',
+      },
+      {
+        id: 'q5',
+        question: 'Un apport personnel plus important peut-il améliorer les conditions d’un crédit ?',
+        options: [
+          'Oui, il peut réduire le montant emprunté et rassurer la banque',
+          'Non, l’apport n’a aucune influence',
+          'Non, il augmente systématiquement le taux',
+          'Cela dépend uniquement de la météo économique',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un apport plus élevé réduit le montant à emprunter et peut permettre de négocier de meilleures conditions.',
+      },
+      {
+        id: 'q6',
+        question:
+          'Pourquoi les banques examinent-elles aussi la stabilité des revenus (type de contrat de travail) ?',
+        options: [
+          'Pour évaluer la capacité à rembourser sur toute la durée du prêt',
+          'Pour fixer uniquement la couleur du contrat',
+          'Cela n’entre jamais en compte',
+          'Uniquement pour les crédits à la consommation',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un revenu stable dans la durée rassure la banque sur la capacité de l’emprunteur à honorer ses mensualités sur le long terme.',
       },
     ],
   },
@@ -680,6 +1142,45 @@ export const LESSONS = {
         explanation:
           'La commission de surendettement de la Banque de France peut accompagner les personnes en difficulté pour trouver une solution.',
       },
+      {
+        id: 'q4',
+        question: 'Qu’est-ce que le rachat de crédits ?',
+        options: [
+          'Le regroupement de plusieurs crédits en un seul, avec une mensualité unique',
+          'L’annulation pure et simple de toutes ses dettes',
+          'Un crédit supplémentaire sans lien avec les autres',
+          'Un livret d’épargne spécifique',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le rachat de crédits regroupe plusieurs prêts en un seul, ce qui peut simplifier et parfois alléger les remboursements mensuels.',
+      },
+      {
+        id: 'q5',
+        question: 'Pourquoi comparer plusieurs offres de crédit avant de s’engager ?',
+        options: [
+          'Pour trouver les conditions les plus avantageuses et éviter le surendettement',
+          'Cela n’a aucun intérêt, toutes les offres sont identiques',
+          'Pour payer plus cher volontairement',
+          'C’est interdit par la loi',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les offres de crédit varient significativement d’un établissement à l’autre ; comparer permet d’emprunter dans de meilleures conditions.',
+      },
+      {
+        id: 'q6',
+        question: 'Quel est un signe précurseur de difficulté financière lié au crédit ?',
+        options: [
+          'Utiliser un nouveau crédit pour rembourser un crédit existant',
+          'Rembourser ses mensualités à l’avance',
+          'Avoir un seul crédit en cours',
+          'Épargner régulièrement',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Emprunter pour rembourser un crédit existant est un signal d’alerte classique de spirale de surendettement.',
+      },
     ],
   },
   'ir-bareme': {
@@ -732,6 +1233,45 @@ export const LESSONS = {
         ],
         correctIndex: 1,
         explanation: 'Tous les foyers fiscaux doivent déclarer leurs revenus chaque année, quel que soit leur montant.',
+      },
+      {
+        id: 'q4',
+        question: 'Qui doit remplir une déclaration de revenus en France ?',
+        options: [
+          'Tous les foyers fiscaux, quel que soit leur niveau de revenu',
+          'Uniquement les personnes sans emploi',
+          'Uniquement les entreprises',
+          'Uniquement les retraités',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La déclaration de revenus est une obligation annuelle pour l’ensemble des foyers fiscaux, y compris ceux non imposables.',
+      },
+      {
+        id: 'q5',
+        question: 'Le prélèvement à la source remplace-t-il l’obligation de déclarer ses revenus ?',
+        options: [
+          'Non, la déclaration annuelle reste obligatoire même avec le prélèvement à la source',
+          'Oui, il supprime totalement la déclaration',
+          'Oui, mais uniquement pour les salariés',
+          'Cela dépend du revenu',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le prélèvement à la source ajuste les paiements mensuels, mais la déclaration annuelle reste nécessaire pour ajuster le calcul définitif de l’impôt.',
+      },
+      {
+        id: 'q6',
+        question: 'Une personne non imposable doit-elle quand même déclarer ses revenus ?',
+        options: [
+          'Oui, la déclaration reste obligatoire même sans impôt à payer',
+          'Non, seules les personnes imposables déclarent',
+          'Cela dépend de son âge uniquement',
+          'Non, jamais',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Même sans impôt à payer, la déclaration reste obligatoire et sert notamment à calculer certaines aides sociales.',
       },
     ],
   },
@@ -787,6 +1327,45 @@ export const LESSONS = {
         explanation:
           'Comme seules les tranches hautes du revenu sont taxées à la TMI, le taux moyen réel payé reste toujours plus bas.',
       },
+      {
+        id: 'q4',
+        question: 'Si la TMI d’un contribuable est de 30%, cela signifie-t-il que tous ses revenus sont taxés à 30% ?',
+        options: [
+          'Non, seule la portion de revenu dans cette tranche est taxée à 30%',
+          'Oui, la totalité du revenu est taxée à ce taux',
+          'Non, aucun revenu n’est taxé à ce taux',
+          'Cela dépend du nombre d’enfants',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le mécanisme des tranches signifie que seule la part de revenu dans la tranche à 30% y est soumise, le reste étant taxé aux taux inférieurs.',
+      },
+      {
+        id: 'q5',
+        question: 'À quoi sert de connaître sa TMI pour un investissement comme le PER ?',
+        options: [
+          'Évaluer l’économie d’impôt réalisée grâce à la déduction des versements',
+          'Fixer le montant de la TVA',
+          'Déterminer le taux du Livret A',
+          'Cela n’a aucune utilité',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les versements déductibles (comme sur un PER) génèrent une économie d’impôt proportionnelle à la TMI du contribuable.',
+      },
+      {
+        id: 'q6',
+        question: 'La TMI peut-elle être égale à 0% ?',
+        options: [
+          'Oui, pour les revenus situés dans la première tranche non imposable',
+          'Non, elle est toujours d’au moins 11%',
+          'Non, le minimum légal est 30%',
+          'Cela n’existe pas en France',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La première tranche du barème est à 0%, ce qui signifie qu’une partie des revenus n’est jamais imposée.',
+      },
     ],
   },
   pfu: {
@@ -834,6 +1413,46 @@ export const LESSONS = {
         correctIndex: 1,
         explanation:
           'Le contribuable peut renoncer au PFU et choisir le barème progressif de l’IR si celui-ci lui est plus favorable.',
+      },
+      {
+        id: 'q4',
+        question: 'Le PFU s’applique-t-il automatiquement, ou faut-il en faire la demande ?',
+        options: [
+          'Il s’applique par défaut, sauf option contraire du contribuable',
+          'Il faut en faire la demande chaque année',
+          'Il ne s’applique jamais par défaut',
+          'Il est réservé aux entreprises',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le PFU est le régime par défaut appliqué aux revenus du capital, sauf si le contribuable opte explicitement pour le barème progressif.',
+      },
+      {
+        id: 'q5',
+        question: 'Dans quel cas le barème progressif peut-il être plus avantageux que le PFU ?',
+        options: [
+          'Quand la TMI du contribuable est faible (0% ou 11%)',
+          'Quand la TMI est de 45%',
+          'Toujours, quel que soit le revenu',
+          'Jamais, le PFU est toujours plus avantageux',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Pour les contribuables faiblement imposés, le barème progressif peut aboutir à une imposition plus légère que le taux forfaitaire de 30%.',
+      },
+      {
+        id: 'q6',
+        question:
+          'Le choix entre PFU et barème progressif est-il valable pour un seul type de revenu ou pour l’ensemble ?',
+        options: [
+          'L’option pour le barème progressif s’applique à l’ensemble des revenus du capital de l’année',
+          'Elle peut être choisie séparément pour chaque dividende perçu',
+          'Elle ne concerne que les intérêts',
+          'Elle n’existe pas',
+        ],
+        correctIndex: 0,
+        explanation:
+          'L’option pour le barème progressif est globale et s’applique à tous les revenus du capital de l’année, pas ligne par ligne.',
       },
     ],
   },
@@ -887,6 +1506,44 @@ export const LESSONS = {
         correctIndex: 1,
         explanation:
           'Par principe comptable, l’actif total est toujours égal au passif total : c’est la base de la partie double.',
+      },
+      {
+        id: 'q4',
+        question: 'À quelle fréquence une entreprise établit-elle généralement son bilan ?',
+        options: [
+          'Au moins une fois par an, à la clôture de l’exercice',
+          'Une seule fois à la création de l’entreprise',
+          'Chaque semaine',
+          'Jamais, ce n’est pas obligatoire',
+        ],
+        correctIndex: 0,
+        explanation: 'Le bilan est établi au minimum une fois par an, à la clôture de l’exercice comptable.',
+      },
+      {
+        id: 'q5',
+        question: 'Que trouve-t-on parmi les capitaux propres au passif du bilan ?',
+        options: [
+          'Le capital social et les bénéfices non distribués',
+          'Les stocks de marchandises',
+          'Le matériel de production',
+          'La trésorerie disponible',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Les capitaux propres regroupent notamment le capital apporté par les associés et les bénéfices accumulés non redistribués.',
+      },
+      {
+        id: 'q6',
+        question: 'Pourquoi un investisseur ou une banque s’intéresse-t-il au bilan d’une entreprise ?',
+        options: [
+          'Pour évaluer sa solidité financière avant de s’engager',
+          'Pour connaître uniquement le nom du dirigeant',
+          'Le bilan n’intéresse jamais les investisseurs',
+          'Pour fixer le prix des matières premières',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Le bilan donne une vision claire de la solidité financière de l’entreprise, essentielle avant d’investir ou de prêter.',
       },
     ],
   },
@@ -943,6 +1600,45 @@ export const LESSONS = {
         explanation:
           'Rentabilité et trésorerie sont deux notions différentes : un BFR mal maîtrisé peut créer des tensions de trésorerie même en étant rentable.',
       },
+      {
+        id: 'q4',
+        question: 'Quel élément du cycle d’exploitation augmente généralement le BFR ?',
+        options: [
+          'Un stock important non encore vendu',
+          'Un paiement immédiat par les clients',
+          'L’absence totale de stock',
+          'Le remboursement d’un emprunt',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Un stock élevé immobilise de la trésorerie sans encaissement immédiat, ce qui augmente le BFR.',
+      },
+      {
+        id: 'q5',
+        question: 'Comment une entreprise peut-elle réduire son BFR ?',
+        options: [
+          'En négociant des délais de paiement plus longs avec ses fournisseurs',
+          'En augmentant systématiquement ses stocks',
+          'En payant ses fournisseurs plus vite que nécessaire',
+          'En attendant plus longtemps pour encaisser ses clients',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Obtenir des délais de paiement plus longs auprès des fournisseurs retarde les décaissements et réduit le besoin de financement.',
+      },
+      {
+        id: 'q6',
+        question: 'Le BFR concerne-t-il uniquement les grandes entreprises ?',
+        options: [
+          'Non, toutes les entreprises ayant un cycle d’exploitation y sont soumises',
+          'Oui, uniquement les entreprises du CAC 40',
+          'Non, seulement les associations',
+          'Le BFR ne concerne aucune entreprise en pratique',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Toute entreprise qui achète, stocke ou vend avec un décalage de trésorerie doit gérer son BFR, quelle que soit sa taille.',
+      },
     ],
   },
   'statuts-juridiques': {
@@ -997,6 +1693,46 @@ export const LESSONS = {
         explanation:
           'Le bon statut juridique se choisit en fonction du projet, du risque encouru et des ambitions de développement de l’activité.',
       },
+      {
+        id: 'q4',
+        question: 'Quel plafond limite l’activité d’une micro-entreprise ?',
+        options: [
+          'Un plafond annuel de chiffre d’affaires',
+          'Un plafond de nombre de clients',
+          'Un plafond d’âge du dirigeant',
+          'Aucun plafond n’existe',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La micro-entreprise est soumise à des plafonds de chiffre d’affaires annuels, différents selon l’activité exercée.',
+      },
+      {
+        id: 'q5',
+        question:
+          'Que se passe-t-il en cas de dettes dans une entreprise individuelle classique (hors option de séparation) ?',
+        options: [
+          'Le patrimoine personnel du dirigeant peut être engagé',
+          'Seul le patrimoine professionnel est jamais concerné',
+          'L’État rembourse automatiquement les dettes',
+          'Aucune conséquence pour le dirigeant',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Sans séparation des patrimoines, les créanciers professionnels peuvent parfois se retourner contre le patrimoine personnel du dirigeant.',
+      },
+      {
+        id: 'q6',
+        question: 'La SASU est-elle adaptée à un projet porté par une seule personne ?',
+        options: [
+          'Oui, elle permet de créer une société avec un seul associé',
+          'Non, il faut au moins deux associés',
+          'Non, la SASU n’existe pas en France',
+          'Elle est réservée aux grandes entreprises',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La SASU (Société par Actions Simplifiée Unipersonnelle) permet à une seule personne de créer une société avec responsabilité limitée.',
+      },
     ],
   },
   'secteurs-activite': {
@@ -1045,6 +1781,28 @@ export const LESSONS = {
         correctIndex: 2,
         explanation:
           'Le secteur tertiaire (commerce, santé, éducation, finance, tourisme...) représente aujourd’hui la majorité de l’activité économique française.',
+      },
+      {
+        id: 'q4',
+        question: 'Un boulanger qui transforme de la farine en pain relève de quel secteur ?',
+        options: ['Le secteur secondaire', 'Le secteur primaire', 'Le secteur tertiaire', 'Aucun secteur'],
+        correctIndex: 0,
+        explanation:
+          'La transformation de matières premières (la farine) en produit fini (le pain) relève du secteur secondaire.',
+      },
+      {
+        id: 'q5',
+        question: 'Un agriculteur qui cultive du blé relève de quel secteur ?',
+        options: ['Le secteur primaire', 'Le secteur secondaire', 'Le secteur tertiaire', 'Aucun secteur'],
+        correctIndex: 0,
+        explanation: 'La production agricole brute, sans transformation, appartient au secteur primaire.',
+      },
+      {
+        id: 'q6',
+        question: 'Un consultant en informatique relève de quel secteur ?',
+        options: ['Le secteur tertiaire', 'Le secteur primaire', 'Le secteur secondaire', 'Aucun secteur'],
+        correctIndex: 0,
+        explanation: 'Les services, y compris le conseil et l’informatique, appartiennent au secteur tertiaire.',
       },
     ],
   },
@@ -1099,6 +1857,40 @@ export const LESSONS = {
         explanation:
           'Si les prix augmentent plus vite que les revenus, on peut acheter moins avec la même somme : le pouvoir d’achat diminue.',
       },
+      {
+        id: 'q4',
+        question: 'Que peut faire la BCE pour lutter contre une inflation trop forte ?',
+        options: [
+          'Augmenter ses taux d’intérêt directeurs',
+          'Baisser ses taux d’intérêt directeurs',
+          'Interdire toute vente en Europe',
+          'Supprimer l’euro',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Augmenter les taux directeurs renchérit le crédit et freine la consommation et l’investissement, ce qui tend à ralentir l’inflation.',
+      },
+      {
+        id: 'q5',
+        question: 'Quel est l’objectif d’inflation visé par la BCE à moyen terme ?',
+        options: ['Environ 2% par an', '0% strictement', '10% par an', 'Il n’y a aucun objectif chiffré'],
+        correctIndex: 0,
+        explanation:
+          'La BCE vise une inflation proche de 2% à moyen terme, jugée compatible avec une croissance économique stable.',
+      },
+      {
+        id: 'q6',
+        question: 'Qu’est-ce que la déflation ?',
+        options: [
+          'Une baisse générale et durable des prix',
+          'Une hausse rapide des prix',
+          'La stabilité totale des prix',
+          'Une dévaluation de l’euro face au dollar',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La déflation est l’opposé de l’inflation : une baisse générale et durable des prix, qui peut freiner l’activité économique.',
+      },
     ],
   },
   cac40: {
@@ -1152,6 +1944,44 @@ export const LESSONS = {
         correctIndex: 1,
         explanation:
           'Un ETF qui réplique le CAC 40 permet d’investir en une seule opération dans les 40 entreprises qui composent l’indice.',
+      },
+      {
+        id: 'q4',
+        question: 'La composition du CAC 40 est-elle fixe dans le temps ?',
+        options: [
+          'Non, elle est révisée périodiquement selon les critères de sélection',
+          'Oui, elle ne change jamais',
+          'Elle change uniquement tous les 50 ans',
+          'Elle est fixée une fois pour toutes à sa création',
+        ],
+        correctIndex: 0,
+        explanation:
+          'La composition du CAC 40 est révisée régulièrement pour refléter l’évolution des grandes entreprises cotées à Paris.',
+      },
+      {
+        id: 'q5',
+        question: 'Sur quelle place boursière le CAC 40 est-il coté ?',
+        options: [
+          'La Bourse de Paris (Euronext Paris)',
+          'La Bourse de New York',
+          'La Bourse de Londres',
+          'La Bourse de Tokyo',
+        ],
+        correctIndex: 0,
+        explanation: 'Le CAC 40 est l’indice de référence d’Euronext Paris, la place boursière française.',
+      },
+      {
+        id: 'q6',
+        question: 'Investir uniquement sur le CAC 40 permet-il de diversifier à l’international ?',
+        options: [
+          'Partiellement, car plusieurs entreprises du CAC 40 réalisent une grande part de leur activité à l’étranger',
+          'Non, ces entreprises n’opèrent qu’en France',
+          'Oui, totalement, car l’indice est mondial',
+          'Cela n’a aucun lien avec l’international',
+        ],
+        correctIndex: 0,
+        explanation:
+          'Beaucoup d’entreprises du CAC 40 sont des multinationales qui réalisent une part importante de leur chiffre d’affaires hors de France.',
       },
     ],
   },
