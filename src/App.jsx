@@ -4,6 +4,7 @@ import ModuleDetail from './pages/ModuleDetail.jsx'
 import Lesson from './pages/Lesson.jsx'
 import Results from './pages/Results.jsx'
 import Division from './pages/Division.jsx'
+import Account from './pages/Account.jsx'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/lesson/:lessonId" element={<Lesson />} />
         <Route path="/results/:lessonId" element={<Results />} />
         <Route path="/division" element={<Division />} />
+        <Route path="/compte" element={<Account />} />
       </Routes>
     </div>
   )

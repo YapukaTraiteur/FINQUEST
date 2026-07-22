@@ -4,6 +4,7 @@ import { useProgress, getLevelForXp } from '../hooks/useProgress.js'
 import { useStreak } from '../hooks/useStreak.js'
 import { useHearts } from '../hooks/useHearts.js'
 import { useLeague } from '../hooks/useLeague.js'
+import { useAccount } from '../hooks/useAccount.js'
 import { getDivisionById } from '../data/divisions.js'
 import ProgressBar from '../components/ProgressBar.jsx'
 import Badge from '../components/Badge.jsx'
@@ -16,6 +17,7 @@ export default function Home() {
   const { streakCount, activeToday } = useStreak()
   const { hearts, maxHearts } = useHearts()
   const { division, weeklyXp } = useLeague()
+  const { account, hasAccount } = useAccount()
   const { current, next } = getLevelForXp(xp)
   const divisionInfo = getDivisionById(division)
 
@@ -42,6 +44,14 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-end gap-1.5 shrink-0">
+          <button
+            type="button"
+            onClick={() => navigate('/compte')}
+            aria-label="Mon compte"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-bg-card border border-white/10 text-lg active:scale-95 transition-transform"
+          >
+            {hasAccount ? account.avatar : '👤'}
+          </button>
           <div
             className={`flex items-center gap-1 rounded-full px-3 py-1.5 font-extrabold text-sm ${
               activeToday ? 'bg-gold/20 text-gold animate-pulse-glow' : 'bg-white/10 text-white/50'

@@ -45,9 +45,9 @@ Soit 66 leçons complètes au total (6 questions chacune).
 ```
 src/
   components/   LessonPath, QuizQuestion, ProgressBar, Badge, Confetti, Hearts, EagleMascot
-  pages/        Home, ModuleDetail, Lesson, Results, Division
+  pages/        Home, ModuleDetail, Lesson, Results, Division, Account
   data/         lessons.js, modules.js, divisions.js
-  hooks/        useProgress.js, useStreak.js, useHearts.js, useLeague.js, useSoundEffects.js
+  hooks/        useProgress.js, useStreak.js, useHearts.js, useLeague.js, useSoundEffects.js, useAccount.js
   App.jsx
   main.jsx
 ```
@@ -71,3 +71,18 @@ src/
   nœuds reliés par un tracé, progression séquentielle verrouillée (chaque
   leçon débloque la suivante une fois complétée), avec garde-fou côté page
   Lesson pour empêcher l'accès direct à une leçon verrouillée par URL.
+
+## Mon compte
+
+Espace de profil accessible via l'icône avatar en haut à droite de l'accueil
+(route `/compte`), entièrement local (`localStorage`, pas de backend) :
+
+- Création de compte : pseudo (2-20 caractères), avatar au choix parmi 12
+  émojis, email optionnel (avec validation de format).
+- Fiche profil : avatar, pseudo, email, date d'inscription.
+- Édition du profil à tout moment (pseudo, avatar, email).
+- Résumé de progression : niveau/badge, XP total, streak, leçons terminées
+  (sur 66), ligue actuelle, cœurs restants.
+- Zone sensible avec confirmation en deux temps :
+  - Réinitialiser la progression (XP, streak, cœurs, ligue) en gardant le compte.
+  - Supprimer définitivement le compte et toute la progression sur l'appareil.
