@@ -3,6 +3,8 @@ import { MODULES } from '../data/modules.js'
 import { useProgress, getLevelForXp } from '../hooks/useProgress.js'
 import { useStreak } from '../hooks/useStreak.js'
 import { useHearts } from '../hooks/useHearts.js'
+import { useLeague } from '../hooks/useLeague.js'
+import { getDivisionById } from '../data/divisions.js'
 import ProgressBar from '../components/ProgressBar.jsx'
 import Badge from '../components/Badge.jsx'
 import Hearts from '../components/Hearts.jsx'
@@ -13,7 +15,9 @@ export default function Home() {
   const { xp, getModuleCompletion } = useProgress()
   const { streakCount, activeToday } = useStreak()
   const { hearts, maxHearts } = useHearts()
+  const { division, weeklyXp } = useLeague()
   const { current, next } = getLevelForXp(xp)
+  const divisionInfo = getDivisionById(division)
 
   const totalLessons = MODULES.reduce((sum, m) => sum + m.lessonIds.length, 0)
   const overallPercent =
@@ -73,6 +77,20 @@ export default function Home() {
           <ProgressBar percent={overallPercent} color="#4CAF50" />
         </div>
       </section>
+
+      <button
+        type="button"
+        onClick={() => navigate('/division')}
+        className="w-full rounded-2xl border p-4 flex items-center gap-3 text-left transition-all active:scale-[0.98]"
+        style={{ borderColor: `${divisionInfo.color}55`, backgroundColor: `${divisionInfo.color}15` }}
+      >
+        <span className="text-3xl shrink-0">{divisionInfo.emoji}</span>
+        <div className="flex-1 min-w-0">
+          <p className="font-extrabold text-white">Ligue {divisionInfo.name}</p>
+          <p className="text-xs text-white/60">{weeklyXp} XP cette semaine</p>
+        </div>
+        <span className="text-white/40 text-xl shrink-0">›</span>
+      </button>
 
       <section className="flex flex-col gap-3">
         <h2 className="text-white/70 font-bold text-sm uppercase tracking-wide">Modules</h2>

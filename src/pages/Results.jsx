@@ -4,6 +4,7 @@ import { getLessonById } from '../data/lessons.js'
 import { getModuleById } from '../data/modules.js'
 import { useProgress } from '../hooks/useProgress.js'
 import { useStreak } from '../hooks/useStreak.js'
+import { useLeague } from '../hooks/useLeague.js'
 import Confetti from '../components/Confetti.jsx'
 import EagleMascot from '../components/EagleMascot.jsx'
 
@@ -14,6 +15,7 @@ export default function Results() {
   const lesson = getLessonById(lessonId)
   const { completeLesson } = useProgress()
   const { markActiveToday } = useStreak()
+  const { addWeeklyXp } = useLeague()
   const hasRecorded = useRef(false)
 
   const correctCount = location.state?.correctCount ?? 0
@@ -25,7 +27,8 @@ export default function Results() {
     hasRecorded.current = true
     completeLesson(lesson.id, lesson.xp)
     markActiveToday()
-  }, [lesson, completeLesson, markActiveToday])
+    addWeeklyXp(lesson.xp)
+  }, [lesson, completeLesson, markActiveToday, addWeeklyXp])
 
   if (!lesson) {
     return (

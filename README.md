@@ -37,9 +37,9 @@ npm run preview
 ```
 src/
   components/   LessonCard, QuizQuestion, ProgressBar, Badge, Confetti, Hearts, EagleMascot
-  pages/        Home, ModuleDetail, Lesson, Results
-  data/         lessons.js, modules.js
-  hooks/        useProgress.js, useStreak.js, useHearts.js
+  pages/        Home, ModuleDetail, Lesson, Results, Division
+  data/         lessons.js, modules.js, divisions.js
+  hooks/        useProgress.js, useStreak.js, useHearts.js, useLeague.js, useSoundEffects.js
   App.jsx
   main.jsx
 ```
@@ -51,6 +51,11 @@ src/
 - Barre de progression par module
 - Badges de niveau : Novice → Épargnant → Investisseur → Expert
 - Mascotte aigle (façon Duo) qui réagit aux bonnes/mauvaises réponses
+- Bruitages (Web Audio API) sur bonne/mauvaise réponse
 - Points de vie (cœurs) : 5 cœurs max, -1 par mauvaise réponse, régénération
   automatique (1 cœur toutes les 4h). Plus de cœurs = leçon bloquée jusqu'à
   régénération.
+- Ligues façon Duolingo : classement hebdomadaire (10 participants, dont 9
+  concurrents simulés localement) basé sur l'XP gagné dans la semaine.
+  Top 3 = promotion à la division supérieure, 3 derniers = relégation.
+  5 divisions : Bronze → Argent → Or → Saphir → Diamant.
