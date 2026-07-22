@@ -25,12 +25,16 @@ npm run preview
 
 ## Modules
 
-- 💰 Budget & épargne (7 leçons)
-- 📈 Investissement (PEA, ETF, livrets) (3 leçons)
-- 🏦 Crédit & emprunt (3 leçons)
-- 🧾 Fiscalité française (IR, TMI, PFU) (3 leçons)
-- 🏢 Finance d'entreprise (bilan, BFR, statuts) (3 leçons)
-- 🇫🇷 Économie française (secteurs, monnaie, CAC 40) (3 leçons)
+Chaque cours existe en 3 niveaux de difficulté (Niveau 1 → 2 → 3, XP croissant).
+
+- 💰 Budget & épargne (7 cours × 3 niveaux = 21 leçons)
+- 📈 Investissement (PEA, ETF, livrets) (3 cours × 3 niveaux = 9 leçons)
+- 🏦 Crédit & emprunt (3 cours × 3 niveaux = 9 leçons)
+- 🧾 Fiscalité française (IR, TMI, PFU) (3 cours × 3 niveaux = 9 leçons)
+- 🏢 Finance d'entreprise (bilan, BFR, statuts) (3 cours × 3 niveaux = 9 leçons)
+- 🇫🇷 Économie française (secteurs, monnaie, CAC 40) (3 cours × 3 niveaux = 9 leçons)
+
+Soit 66 leçons complètes au total (6 questions chacune).
 
 ## Structure
 
