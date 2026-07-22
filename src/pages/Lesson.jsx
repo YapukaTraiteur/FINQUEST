@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { getLessonById } from '../data/lessons.js'
 import { getModuleById } from '../data/modules.js'
 import { useHearts } from '../hooks/useHearts.js'
+import { useProgress } from '../hooks/useProgress.js'
 import QuizQuestion from '../components/QuizQuestion.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 import Hearts from '../components/Hearts.jsx'
@@ -26,6 +27,7 @@ export default function Lesson() {
   const [correctCount, setCorrectCount] = useState(0)
   const [hasAnswered, setHasAnswered] = useState(false)
   const { hearts, maxHearts, nextRegenAt, loseHeart } = useHearts()
+  const { isLessonCompleted } = useProgress()
 
   if (!lesson) {
     return (
@@ -39,6 +41,29 @@ export default function Lesson() {
   }
 
   const module = getModuleById(lesson.moduleId)
+  const lessonIndex = module?.lessonIds.indexOf(lesson.id) ?? -1
+  const previousLessonId = lessonIndex > 0 ? module.lessonIds[lessonIndex - 1] : null
+  const isLocked =
+    Boolean(previousLessonId) && !isLessonCompleted(previousLessonId) && !isLessonCompleted(lesson.id)
+
+  if (isLocked) {
+    return (
+      <div className="flex flex-col items-center gap-4 px-5 pt-16 pb-24 min-h-screen text-center">
+        <EagleMascot mood="sad" size={110} />
+        <h1 className="text-xl font-black text-white">Cette leçon est verrouillée 🔒</h1>
+        <p className="text-white/60">
+          Termine d'abord la leçon précédente pour débloquer « {lesson.title} ».
+        </p>
+        <button
+          type="button"
+          onClick={() => navigate(module ? `/module/${module.id}` : '/')}
+          className="mt-auto w-full rounded-2xl bg-primary py-4 font-extrabold text-white active:scale-[0.98] transition-transform"
+        >
+          Retour au module
+        </button>
+      </div>
+    )
+  }
   const totalQuestions = lesson.questions.length
   const isIntro = step === STEP_INTRO
   const questionIndex = isIntro ? 0 : step

@@ -2,7 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { getModuleById } from '../data/modules.js'
 import { getLessonById } from '../data/lessons.js'
 import { useProgress } from '../hooks/useProgress.js'
-import LessonCard from '../components/LessonCard.jsx'
+import LessonPath from '../components/LessonPath.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 
 export default function ModuleDetail() {
@@ -48,25 +48,18 @@ export default function ModuleDetail() {
         <p className="text-xs text-white/40">{percent}% complété</p>
       </section>
 
-      <section className="flex flex-col gap-3">
-        {module.lessonIds.length === 0 && (
+      <section>
+        {module.lessonIds.length === 0 ? (
           <p className="text-center text-white/40 text-sm py-8">
             Les leçons de ce module arrivent bientôt. 🚧
           </p>
+        ) : (
+          <LessonPath
+            lessons={module.lessonIds.map((lessonId) => getLessonById(lessonId)).filter(Boolean)}
+            color={module.color}
+            isLessonCompleted={isLessonCompleted}
+          />
         )}
-        {module.lessonIds.map((lessonId) => {
-          const lesson = getLessonById(lessonId)
-          if (!lesson) return null
-          return (
-            <LessonCard
-              key={lessonId}
-              lesson={lesson}
-              completed={isLessonCompleted(lessonId)}
-              locked={false}
-              color={module.color}
-            />
-          )
-        })}
       </section>
     </div>
   )

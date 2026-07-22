@@ -40,7 +40,7 @@ Soit 66 leçons complètes au total (6 questions chacune).
 
 ```
 src/
-  components/   LessonCard, QuizQuestion, ProgressBar, Badge, Confetti, Hearts, EagleMascot
+  components/   LessonPath, QuizQuestion, ProgressBar, Badge, Confetti, Hearts, EagleMascot
   pages/        Home, ModuleDetail, Lesson, Results, Division
   data/         lessons.js, modules.js, divisions.js
   hooks/        useProgress.js, useStreak.js, useHearts.js, useLeague.js, useSoundEffects.js
@@ -63,3 +63,7 @@ src/
   concurrents simulés localement) basé sur l'XP gagné dans la semaine.
   Top 3 = promotion à la division supérieure, 3 derniers = relégation.
   5 divisions : Bronze → Argent → Or → Saphir → Diamant.
+- Chemin de leçons façon Duolingo (`LessonPath`) : parcours sinueux avec
+  nœuds reliés par un tracé, progression séquentielle verrouillée (chaque
+  leçon débloque la suivante une fois complétée), avec garde-fou côté page
+  Lesson pour empêcher l'accès direct à une leçon verrouillée par URL.
